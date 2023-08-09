@@ -1,0 +1,10 @@
+{
+    "/api": {
+        "target": "https://br1.api.riotgames.com",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+}

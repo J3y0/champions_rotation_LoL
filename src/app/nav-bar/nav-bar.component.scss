@@ -1,0 +1,46 @@
+:host {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 80px;
+    background: #111111;
+    border-bottom: 1px solid #333333;
+}
+
+.logo {
+    width: 94px;
+    height: 53px;
+}
+
+.linkbutton {
+    display: flex;
+    padding: 0 65px;
+    gap: 65px;
+    
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        padding: 10px;
+        display: inline-block;
+        cursor: pointer;
+
+        color: #F9F9F9;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    a:hover {
+        background-color: #393939;
+        border-radius: 7px;
+    }
+}

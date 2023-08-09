@@ -1,0 +1,19 @@
+<ng-container *ngIf="curChampionInfos$ | async as curChampionInfos">
+    <div *ngFor="let champInfo of curChampionInfos" class="element">
+        <a routerLink="/champion/{{champInfo.id}}">
+            <img class="image"
+                src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-tiles/{{champInfo.id}}/{{champInfo.id}}000.jpg" />
+            <span class="caption">{{champInfo.name}}</span>
+        </a>
+    </div>
+</ng-container>
+
+<!-- <ng-template #loadingOrError>
+    <ng-container *ngIf="error; else loading">
+        Error
+    </ng-container>     
+</ng-template> -->
+
+<!-- <ng-template #loading>
+    Loading
+</ng-template> -->

@@ -1,0 +1,37 @@
+<ng-container *ngIf="championInfo$ | async as championInfo">
+    <img class="bg-img" src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/{{championInfo.id}}/{{championInfo.id}}000.jpg">
+    <div class="dark-block"></div>
+    <div class="description">
+        <img class="hero-img"
+            src="https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/{{championInfo.id}}/{{championInfo.id}}000.jpg">
+        <div>
+            <h2>{{championInfo.name | uppercase}}</h2>
+            <h3>{{championInfo.title}}</h3>
+            <div class="bio"><span>"{{championInfo.shortBio}}"</span></div>
+            <hr>
+            <h2>Statistiques</h2>
+            <table class="table">
+                    <tr>
+                        <td>Crowd control</td>
+                        <td>{{championInfo.playstyleInfo.crowdControl}}</td>
+                    </tr>
+                    <tr>
+                        <td>Damage</td>
+                        <td>{{championInfo.playstyleInfo.damage}}</td>
+                    </tr>
+                    <tr>
+                        <td>Durability</td>
+                        <td>{{championInfo.playstyleInfo.durability}}</td>
+                    </tr>
+                    <tr>
+                        <td>Mobility</td>
+                        <td>{{championInfo.playstyleInfo.mobility}}</td>
+                    </tr>
+                    <tr>
+                        <td>Utility</td>
+                        <td>{{championInfo.playstyleInfo.utility}}</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,54 @@
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.element {
+    width: 20%;
+    margin-bottom: 2em;
+
+    a {
+        cursor: pointer;
+        display: block;
+        width: 90%;
+        margin: auto;
+        text-decoration: none;
+
+        .image {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .caption {
+            padding: 15px;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-style: italic;
+            font-weight:600;
+            font-size: 20px;
+
+            color: #F9F9F9;
+            background-color: rgb(6, 28, 37);
+
+            border-top: 1px solid #094158;
+        }
+
+        &:hover {
+            transition: transform 400ms;
+            transform: scale(110%);
+            .caption {
+                background-color: #094158;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .element a .caption {
+        font-size: 17px;
+    }
+}
